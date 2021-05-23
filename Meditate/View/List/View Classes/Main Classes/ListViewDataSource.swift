@@ -38,4 +38,15 @@ class ListViewDataSource: NSObject, UICollectionViewDataSource {
     }
     return cell
   }
+  
+  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    guard kind == UICollectionView.elementKindSectionHeader,
+          let sectionType = SectionType(rawValue: indexPath.section),
+          let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: ListViewSectionHeader.self), for: indexPath) as? ListViewSectionHeader else {
+      return UICollectionReusableView()
+    }
+        
+    sectionHeader.sectionHeaderLabel.text = sectionType.sectionTitle
+    return sectionHeader
+  }
 }

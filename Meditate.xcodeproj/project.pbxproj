@@ -61,6 +61,8 @@
 		4E62051F265A9F62008C78A8 /* ListViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62051E265A9F62008C78A8 /* ListViewDataProvider.swift */; };
 		4E620524265AA009008C78A8 /* ListViewParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620523265AA009008C78A8 /* ListViewParser.swift */; };
 		4E620529265AA066008C78A8 /* ListViewParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620528265AA066008C78A8 /* ListViewParsable.swift */; };
+		4E62052F265AB692008C78A8 /* ListViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62052D265AB692008C78A8 /* ListViewSectionHeader.swift */; };
+		4E620530265AB692008C78A8 /* ListViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */; };
 		87C8034C4F03FD549575D1DA /* Pods_Meditate_MeditateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493CB210B080358A67AC60AB /* Pods_Meditate_MeditateUITests.framework */; };
 		8D7708A2AAC0D6580E8B5534 /* Pods_MeditateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */; };
 /* End PBXBuildFile section */
@@ -149,6 +151,8 @@
 		4E62051E265A9F62008C78A8 /* ListViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataProvider.swift; sourceTree = "<group>"; };
 		4E620523265AA009008C78A8 /* ListViewParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewParser.swift; sourceTree = "<group>"; };
 		4E620528265AA066008C78A8 /* ListViewParsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewParsable.swift; sourceTree = "<group>"; };
+		4E62052D265AB692008C78A8 /* ListViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewSectionHeader.swift; sourceTree = "<group>"; };
+		4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewSectionHeader.xib; sourceTree = "<group>"; };
 		A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C544980D8DB06F5BCECBC3F7 /* Pods-Meditate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate.debug.xcconfig"; path = "Target Support Files/Pods-Meditate/Pods-Meditate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -452,6 +456,8 @@
 				4E620468265A8394008C78A8 /* ListViewHorizontalCell.swift */,
 				4E6204C3265A8CDC008C78A8 /* ListViewBannerCell.swift */,
 				4E620426265A7357008C78A8 /* ListViewContentCell.swift */,
+				4E62052D265AB692008C78A8 /* ListViewSectionHeader.swift */,
+				4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */,
 			);
 			path = "Cell Classes";
 			sourceTree = "<group>";
@@ -688,6 +694,7 @@
 				4E6204C6265A8CDC008C78A8 /* ListViewBannerCell.xib in Resources */,
 				4E62038C265A48FE008C78A8 /* Assets.xcassets in Resources */,
 				4E620429265A7357008C78A8 /* ListViewContentCell.xib in Resources */,
+				4E620530265AB692008C78A8 /* ListViewSectionHeader.xib in Resources */,
 				4E62038A265A48FD008C78A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,6 +838,7 @@
 				4E6204D8265A9305008C78A8 /* ListViewManager.swift in Sources */,
 				4E62043E265A7449008C78A8 /* BaseCollectionViewCellViewModel.swift in Sources */,
 				4E620387265A48FD008C78A8 /* ListViewController.swift in Sources */,
+				4E62052F265AB692008C78A8 /* ListViewSectionHeader.swift in Sources */,
 				4E620524265AA009008C78A8 /* ListViewParser.swift in Sources */,
 				4E620478265A848D008C78A8 /* ListViewHorizontalCellViewModel.swift in Sources */,
 				4E62042E265A737A008C78A8 /* ListViewBaseCell.swift in Sources */,

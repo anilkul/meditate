@@ -39,6 +39,9 @@ class ListViewController: UIViewController {
     ItemType.mainCellsToRegister.forEach { (cellType) in
       collectionView.register(UINib(nibName: cellType.identifier, bundle: nil), forCellWithReuseIdentifier: cellType.identifier)
     }
+    collectionView.register(UINib.init(nibName: String(describing: ListViewSectionHeader.self), bundle: nil),
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                            withReuseIdentifier: String(describing: ListViewSectionHeader.self))
   }
 
   func reloadData() -> VoidHandler {
@@ -54,7 +57,7 @@ class ListViewController: UIViewController {
   }
 }
 
-// MARK: - UI Lifecycle
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ListViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let cellViewModel = manager.dataSourceViewModel.cellViewModel(at: indexPath)

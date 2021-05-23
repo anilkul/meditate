@@ -43,8 +43,8 @@ struct Constants {
     static let collectionViewRegularRightInset: CGFloat = 40
     
     /// Section Type
-    static let compactSectionBottomMargin: CGFloat = 24
-    static let regularSectionBottomMargin: CGFloat = 24
+    static let compactSectionBottomMargin: CGFloat = 40
+    static let regularSectionBottomMargin: CGFloat = 48
     static let meditationsTitle: String = "Mediations"
     static let storiesTitle: String = "Stories"
     static let compactSectionHeaderHeight: CGFloat = 45
