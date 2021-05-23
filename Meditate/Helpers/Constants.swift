@@ -10,6 +10,9 @@ import UIKit
 typealias VoidHandler = () -> Void
 
 struct Constants {
+  static let emptyString: String = ""
+  static let bannerIndex: Int = 1
+  
   // URLs
   struct URLs {
     static let baseURL = "https://jsonblob.com/api/jsonBlob/a07152f5-775c-11eb-a533-c90b9d55001f"
