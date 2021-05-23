@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -101,7 +101,6 @@
 				251E63107DA6EE3FAC26F52A /* Pods-MeditateTests.debug.xcconfig */,
 				300468F4B7EBB987A51B90CD /* Pods-MeditateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -222,19 +221,10 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		4E6203BD265A4FDA008C78A8 /* View Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "View Classes";
-			path = "../../View Classes";
-			sourceTree = "<group>";
-		};
 		4E6203BE265A4FE5008C78A8 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				4E6203C0265A4FF0008C78A8 /* View Classes */,
-				4E6203BD265A4FDA008C78A8 /* View Classes */,
 				4E6203BF265A4FEB008C78A8 /* UI */,
 			);
 			path = List;
@@ -758,6 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3L6HNN9N3;
 				INFOPLIST_FILE = Meditate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -778,6 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3L6HNN9N3;
 				INFOPLIST_FILE = Meditate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
