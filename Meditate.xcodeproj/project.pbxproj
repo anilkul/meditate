@@ -457,7 +457,6 @@
 				4E6204C3265A8CDC008C78A8 /* ListViewBannerCell.swift */,
 				4E620426265A7357008C78A8 /* ListViewContentCell.swift */,
 				4E62052D265AB692008C78A8 /* ListViewSectionHeader.swift */,
-				4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */,
 			);
 			path = "Cell Classes";
 			sourceTree = "<group>";
@@ -515,6 +514,7 @@
 		4E620460265A79FA008C78A8 /* Cell UI */ = {
 			isa = PBXGroup;
 			children = (
+				4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */,
 				4E620469265A8394008C78A8 /* ListViewHorizontalCell.xib */,
 				4E6204C4265A8CDC008C78A8 /* ListViewBannerCell.xib */,
 				4E620427265A7357008C78A8 /* ListViewContentCell.xib */,
