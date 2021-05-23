@@ -30,8 +30,9 @@ class ListViewDataProvider: ListViewDataProvidable {
         self.viewModel.cellViewModels = self.parser.parsed(contentList: contentList)
         self.viewModel.reloadTrigger?()
       case .failure(let error):
-        // TODO: Error Logger
-        print(error)
+        #if DEBUG
+        print(APIError.apiError(error: error))
+        #endif
       }
     }
   }
