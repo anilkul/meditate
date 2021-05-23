@@ -12,6 +12,7 @@ typealias VoidHandler = () -> Void
 struct Constants {
   static let emptyString: String = ""
   static let bannerIndex: Int = 1
+  static let dateFormatString: String = "MM/dd/yyyy, EE"
   
   // URLs
   struct URLs {
@@ -24,7 +25,11 @@ struct Constants {
       UIApplication.shared.windows.filter({ $0.isKeyWindow }).first?.frame.width ?? UIScreen.main.bounds.width
     }
     
+    static let mainStoryboardIdentifier: String = "Main"
+    
     // List
+    static let collectionViewCompactTopInset: CGFloat = 28
+    static let collectionViewRegularTopInset: CGFloat = 48
     static let contentTitleTopMargin: CGFloat = 8
     static let bannerHeight: CGFloat = 124
     static let compactAspectRatio: CGFloat = 1.405

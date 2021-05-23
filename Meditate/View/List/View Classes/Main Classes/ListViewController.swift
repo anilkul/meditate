@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: BaseViewController {
   // MARK: - IBOutlets
   @IBOutlet weak var collectionView: UICollectionView!
   
@@ -24,18 +24,34 @@ class ListViewController: UIViewController {
     manager.dataProvider.requestContentList()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      navigationController?.setNavigationBarHidden(true, animated: animated)
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      navigationController?.setNavigationBarHidden(false, animated: animated)
+  }
+  
   // MARK: - Bindings
-  private func provideBindings() {
+  private final func provideBindings() {
     manager.viewModel.reloadTrigger = reloadData()
+    manager.router.pushViewController = pushViewController()
   }
   
   // MARK: - UI Operations
-  private func configureUI() {
+  private final func configureUI() {
+    collectionView.contentInset = manager.viewModel.collectionViewEdgeInsets
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: Constants.emptyString,
+                                                       style: .plain,
+                                                       target: nil,
+                                                       action: nil)
     collectionView.dataSource = manager.dataSource
     registerComponents()
   }
   
-  private func registerComponents() {
+  private final func registerComponents() {
     ItemType.mainCellsToRegister.forEach { (cellType) in
       collectionView.register(UINib(nibName: cellType.identifier, bundle: nil), forCellWithReuseIdentifier: cellType.identifier)
     }
@@ -44,7 +60,7 @@ class ListViewController: UIViewController {
                             withReuseIdentifier: String(describing: ListViewSectionHeader.self))
   }
 
-  func reloadData() -> VoidHandler {
+  final func reloadData() -> VoidHandler {
     return { [weak self] in
       guard let self = self else { return }
       self.collectionView.reloadData()
@@ -95,5 +111,3 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
     return sectionType.sectionHeaderSize
   }
 }
-
-

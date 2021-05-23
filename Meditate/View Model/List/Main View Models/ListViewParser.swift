@@ -5,7 +5,15 @@
 //  Created by Mehmet Anıl Kul on 23.05.2021.
 //
 
-struct ListViewParser: ListViewParsable {
+class ListViewParser: ListViewParsable {
+  // MARK: - Variables
+  var router: Routable
+  
+  // MARK: - Initializer
+  init(router: Routable) {
+    self.router = router
+  }
+  
   // MARK: - List Parser
   func parsed(contentList: ContentList) -> [[BaseCollectionViewCellViewModelProtocol]] {
     var dataSource: [[BaseCollectionViewCellViewModelProtocol]] = []
@@ -26,7 +34,7 @@ struct ListViewParser: ListViewParsable {
   private func parsed(content: [ContentListable], itemType: ItemType) -> [BaseCollectionViewCellViewModelProtocol] {
     var contentDataSource: [BaseCollectionViewCellViewModelProtocol] = []
     content.forEach {
-      contentDataSource.append(ListViewContentCellViewModel(itemType: itemType, content: $0))
+      contentDataSource.append(ListViewContentCellViewModel(itemType: itemType, content: $0, router: router))
     }
     
     return contentDataSource

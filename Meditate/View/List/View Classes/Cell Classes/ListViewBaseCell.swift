@@ -19,7 +19,7 @@ class ListViewBaseCell: UICollectionViewCell {
     do {
       try self.configurationBlock?(viewModel)
     } catch {
-      fatalError("Cell configure error for \(String(describing: viewModel)): \(error.localizedDescription)")
+      fatalError(ErrorLogger.UIError.cellConfigureError(viewModelName: String(describing: viewModel)).errorMessage(methodName: "\(#function)", fileName: "\(#file)", errorDescription: error.localizedDescription))
     }
   }
 }

@@ -10,15 +10,15 @@ import UIKit
 class ListViewContentCellViewModel: BaseCollectionViewCellViewModel, ListViewContentCellViewModelProtocol {
   // MARK: - Variables
   var imageURL: URL?
-  var name: String
-  var category: String
+  var content: ContentListable
+  var router: Routable
   
   // MARK: - Initializer
-  init(itemType: ItemType, content: ContentListable) {
-    self.name = content.name
-    self.category = content.category
+  init(itemType: ItemType, content: ContentListable, router: Routable) {
+    self.router = router
+    self.content = content
     imageURL = URL(string: content.image.small)
     super.init()
-    self.type = itemType
+    type = itemType
   }
 }

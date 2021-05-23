@@ -9,6 +9,6 @@ import UIKit
 
 protocol ListViewContentCellViewModelProtocol: BaseCollectionViewCellViewModelProtocol {
   var imageURL: URL? { get }
-  var name: String { get }
-  var category: String { get }
+  var content: ContentListable { get }
+  var router: Routable { get }
 }

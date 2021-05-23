@@ -9,6 +9,6 @@ class ListViewBannerCellViewModel: BaseCollectionViewCellViewModel, ListViewBann
   // MARK: - Initializer
   override init() {
     super.init()
-    self.type = .banner
+    type = .banner
   }
 }

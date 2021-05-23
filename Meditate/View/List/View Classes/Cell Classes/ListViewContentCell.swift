@@ -26,8 +26,14 @@ class ListViewContentCell: ListViewBaseCell {
       guard let self = self else { return }
       guard let viewModel = viewModel as? ListViewContentCellViewModelProtocol else { return }
       self.imageView.kf.setImage(with: viewModel.imageURL)
-      self.titleLabel.text = viewModel.name
-      self.subtitleLabel.text = viewModel.category
+      self.titleLabel.text = viewModel.content.name
+      self.subtitleLabel.text = viewModel.content.category
     }
+  }
+  
+  @IBAction func contentPressed(_ sender: UIButton) {
+    guard let viewModel = viewModel as? ListViewContentCellViewModelProtocol else { return }
+    let detailViewController = ViewControllers.detailViewController(with: viewModel.content)
+    viewModel.router.pushViewController?(detailViewController)
   }
 }

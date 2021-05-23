@@ -25,7 +25,7 @@ var isLandscape: Bool {
   if #available(iOS 13.0, *) {
     guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
       #if DEBUG
-      fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+      fatalError(ErrorLogger.UIError.couldNotObtainOrientation.errorMessage(methodName: "\(#function)", fileName: "\(#file)"))
       #else
       return false
       #endif

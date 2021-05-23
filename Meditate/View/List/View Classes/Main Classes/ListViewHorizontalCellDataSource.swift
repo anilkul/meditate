@@ -27,7 +27,7 @@ class ListViewHorizontalCellDataSource: NSObject, UICollectionViewDataSource {
     let cellViewModel = viewModel.cellViewModel(at: indexPath)
     let identifier = cellViewModel.type.identifier
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? ListViewBaseCell else {
-      fatalError("Cell could not be created.")
+      fatalError(ErrorLogger.UIError.cellCouldNotBeCreated(className: String(describing: ListViewBaseCell.self)).errorMessage(methodName: "\(#function)", fileName: "\(#file)"))
     }
     cell.configureCell(with: cellViewModel, for: indexPath)
     return cell

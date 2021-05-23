@@ -25,6 +25,6 @@ class ListViewHorizontalCellViewModel: BaseCollectionViewCellViewModel, ListView
     self.cellViewModels = cellViewModels
     self.horizontalItemType = ItemType.horizontal(horizontalItemType)
     super.init()
-    self.type = ItemType.horizontal(nil)
+    type = ItemType.horizontal(nil)
   }
 }

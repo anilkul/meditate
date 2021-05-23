@@ -14,4 +14,5 @@ protocol ListViewManagable {
   var networkManager: NetworkManagable { get }
   var dataProvider: ListViewDataProvidable { get }
   var parser: ListViewParsable { get }
+  var router: Routable { get set }
 }

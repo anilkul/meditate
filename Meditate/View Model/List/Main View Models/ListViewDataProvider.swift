@@ -13,14 +13,14 @@ class ListViewDataProvider: ListViewDataProvidable {
   var parser: ListViewParsable
   var networkManager: NetworkManagable
   
-  // MARK: - InternetConnection
+  // MARK: - Initialization
   init(viewModel: ListViewModelProtocol, parser: ListViewParsable, networkManager: NetworkManagable) {
     self.viewModel = viewModel
     self.parser = parser
     self.networkManager = networkManager
   }
   
-  // MARK: -
+  // MARK: - Request Operations
   func requestContentList() {
     // Since baseURL is provided as default value and other default values satisfy our network request, no need to fill the APIMethod struct.
     let apiMethod: APIMethod = APIMethod()

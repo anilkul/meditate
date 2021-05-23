@@ -77,13 +77,23 @@
                             <constraint firstItem="jeE-4y-5D0" firstAttribute="top" secondItem="aTf-fr-Dc1" secondAttribute="top" id="wEy-F9-CeZ"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvp-Aj-WcS">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="215"/>
+                        <connections>
+                            <action selector="contentPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="J6O-sw-dMZ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="aTf-fr-Dc1" secondAttribute="bottom" id="4uR-AE-8DO"/>
                 <constraint firstItem="aTf-fr-Dc1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AEa-vt-fSL"/>
+                <constraint firstItem="Bvp-Aj-WcS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DZb-87-EMh"/>
                 <constraint firstItem="aTf-fr-Dc1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O8p-ee-tXI"/>
+                <constraint firstAttribute="trailing" secondItem="Bvp-Aj-WcS" secondAttribute="trailing" id="Quw-ea-2F2"/>
+                <constraint firstAttribute="bottom" secondItem="Bvp-Aj-WcS" secondAttribute="bottom" id="WVH-xS-qrM"/>
+                <constraint firstItem="Bvp-Aj-WcS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cx3-lM-5fF"/>
                 <constraint firstAttribute="trailing" secondItem="aTf-fr-Dc1" secondAttribute="trailing" id="lg1-Kg-rkK"/>
             </constraints>
             <size key="customSize" width="158" height="213"/>
@@ -92,7 +102,7 @@
                 <outlet property="subtitleLabel" destination="VE7-NU-krq" id="nI3-t9-o7I"/>
                 <outlet property="titleLabel" destination="dgy-sZ-oVP" id="Npw-I9-QvJ"/>
             </connections>
-            <point key="canvasLocation" x="-348.20143884892087" y="32.412060301507537"/>
+            <point key="canvasLocation" x="-349.27536231884062" y="31.808035714285712"/>
         </collectionViewCell>
     </objects>
 </document>

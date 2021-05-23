@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol ContentListable: Decodable {
-  var name: String { get }
+protocol ContentListable: ContentDetailable {
   var category: String { get }
-  var image: Image { get }
-  var date: String { get }
-  var text: String { get }
 }

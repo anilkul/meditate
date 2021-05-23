@@ -63,6 +63,14 @@
 		4E620529265AA066008C78A8 /* ListViewParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620528265AA066008C78A8 /* ListViewParsable.swift */; };
 		4E62052F265AB692008C78A8 /* ListViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62052D265AB692008C78A8 /* ListViewSectionHeader.swift */; };
 		4E620530265AB692008C78A8 /* ListViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */; };
+		4E62054D265ABC52008C78A8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62054C265ABC52008C78A8 /* DetailViewController.swift */; };
+		4E620552265ABC9F008C78A8 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620551265ABC9F008C78A8 /* DetailViewModel.swift */; };
+		4E62055A265ABCB7008C78A8 /* DetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620559265ABCB7008C78A8 /* DetailViewModelProtocol.swift */; };
+		4E62055F265ABCE9008C78A8 /* ContentDetailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62055E265ABCE9008C78A8 /* ContentDetailable.swift */; };
+		4E620578265AC252008C78A8 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620577265AC252008C78A8 /* ViewControllers.swift */; };
+		4E620585265AD660008C78A8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620584265AD660008C78A8 /* Router.swift */; };
+		4E62058A265AE1FF008C78A8 /* ErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620589265AE1FF008C78A8 /* ErrorLogger.swift */; };
+		4E62058F265AEC0E008C78A8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62058E265AEC0E008C78A8 /* BaseViewController.swift */; };
 		87C8034C4F03FD549575D1DA /* Pods_Meditate_MeditateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493CB210B080358A67AC60AB /* Pods_Meditate_MeditateUITests.framework */; };
 		8D7708A2AAC0D6580E8B5534 /* Pods_MeditateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */; };
 /* End PBXBuildFile section */
@@ -153,6 +161,14 @@
 		4E620528265AA066008C78A8 /* ListViewParsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewParsable.swift; sourceTree = "<group>"; };
 		4E62052D265AB692008C78A8 /* ListViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewSectionHeader.swift; sourceTree = "<group>"; };
 		4E62052E265AB692008C78A8 /* ListViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewSectionHeader.xib; sourceTree = "<group>"; };
+		4E62054C265ABC52008C78A8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4E620551265ABC9F008C78A8 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4E620559265ABCB7008C78A8 /* DetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		4E62055E265ABCE9008C78A8 /* ContentDetailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailable.swift; sourceTree = "<group>"; };
+		4E620577265AC252008C78A8 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		4E620584265AD660008C78A8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4E620589265AE1FF008C78A8 /* ErrorLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogger.swift; sourceTree = "<group>"; };
+		4E62058E265AEC0E008C78A8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C544980D8DB06F5BCECBC3F7 /* Pods-Meditate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate.debug.xcconfig"; path = "Target Support Files/Pods-Meditate/Pods-Meditate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,6 +305,7 @@
 				4E620491265A85EC008C78A8 /* Extensions */,
 				4E62040D265A60DF008C78A8 /* Constants.swift */,
 				4E620412265A60F9008C78A8 /* Global Variables.swift */,
+				4E620589265AE1FF008C78A8 /* ErrorLogger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -304,6 +321,7 @@
 		4E6203BB265A4F95008C78A8 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				4E620576265AC243008C78A8 /* View Classes */,
 				4E6203BC265A4FA1008C78A8 /* UI */,
 			);
 			path = General;
@@ -356,6 +374,7 @@
 		4E6203C2265A500A008C78A8 /* View Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4E62054C265ABC52008C78A8 /* DetailViewController.swift */,
 			);
 			path = "View Classes";
 			sourceTree = "<group>";
@@ -372,6 +391,7 @@
 		4E6203C4265A5039008C78A8 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				4E620551265ABC9F008C78A8 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -398,6 +418,7 @@
 		4E6203C7265A5059008C78A8 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				4E620559265ABCB7008C78A8 /* DetailViewModelProtocol.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -489,6 +510,7 @@
 				4E620504265A9D19008C78A8 /* NetworkManagable.swift */,
 				4E62050C265A9D4E008C78A8 /* APIMethodProtocol.swift */,
 				4E620516265A9F41008C78A8 /* ListViewDataProvidable.swift */,
+				4E62055E265ABCE9008C78A8 /* ContentDetailable.swift */,
 			);
 			path = "Main Protocols";
 			sourceTree = "<group>";
@@ -559,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6204E9265A9BCD008C78A8 /* NetworkManager.swift */,
+				4E620584265AD660008C78A8 /* Router.swift */,
 			);
 			path = "Main View Models";
 			sourceTree = "<group>";
@@ -569,6 +592,15 @@
 				4E62043D265A7449008C78A8 /* BaseCollectionViewCellViewModel.swift */,
 			);
 			path = "Cell View Models";
+			sourceTree = "<group>";
+		};
+		4E620576265AC243008C78A8 /* View Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E620577265AC252008C78A8 /* ViewControllers.swift */,
+				4E62058E265AEC0E008C78A8 /* BaseViewController.swift */,
+			);
+			path = "View Classes";
 			sourceTree = "<group>";
 		};
 		5297F5068582B4E6ABFE9E62 /* Frameworks */ = {
@@ -823,10 +855,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E62055F265ABCE9008C78A8 /* ContentDetailable.swift in Sources */,
 				4E6204EA265A9BCD008C78A8 /* NetworkManager.swift in Sources */,
 				4E62046A265A8394008C78A8 /* ListViewHorizontalCell.swift in Sources */,
 				4E620418265A66D4008C78A8 /* HorizontalItemTypeProtocol.swift in Sources */,
 				4E620487265A8563008C78A8 /* ListViewHorizontalCellDataSourceViewModel.swift in Sources */,
+				4E62058F265AEC0E008C78A8 /* BaseViewController.swift in Sources */,
+				4E62058A265AE1FF008C78A8 /* ErrorLogger.swift in Sources */,
 				4E620505265A9D19008C78A8 /* NetworkManagable.swift in Sources */,
 				4E6204D3265A8D74008C78A8 /* ListViewBannerCellViewModel.swift in Sources */,
 				4E62051F265A9F62008C78A8 /* ListViewDataProvider.swift in Sources */,
@@ -834,15 +869,19 @@
 				4E62048D265A85C5008C78A8 /* ListViewHorizontalCellDataSource.swift in Sources */,
 				4E620422265A6EE8008C78A8 /* SectionType.swift in Sources */,
 				4E620473265A844C008C78A8 /* ListViewHorizontalCellViewModelProtocol.swift in Sources */,
+				4E620585265AD660008C78A8 /* Router.swift in Sources */,
 				4E6204A1265A8AB0008C78A8 /* ListViewDataSourceViewModel.swift in Sources */,
 				4E6204D8265A9305008C78A8 /* ListViewManager.swift in Sources */,
 				4E62043E265A7449008C78A8 /* BaseCollectionViewCellViewModel.swift in Sources */,
 				4E620387265A48FD008C78A8 /* ListViewController.swift in Sources */,
 				4E62052F265AB692008C78A8 /* ListViewSectionHeader.swift in Sources */,
+				4E62054D265ABC52008C78A8 /* DetailViewController.swift in Sources */,
 				4E620524265AA009008C78A8 /* ListViewParser.swift in Sources */,
+				4E62055A265ABCB7008C78A8 /* DetailViewModelProtocol.swift in Sources */,
 				4E620478265A848D008C78A8 /* ListViewHorizontalCellViewModel.swift in Sources */,
 				4E62042E265A737A008C78A8 /* ListViewBaseCell.swift in Sources */,
 				4E620413265A60F9008C78A8 /* Global Variables.swift in Sources */,
+				4E620578265AC252008C78A8 /* ViewControllers.swift in Sources */,
 				4E6204E2265A9B1B008C78A8 /* ListViewManagable.swift in Sources */,
 				4E620383265A48FD008C78A8 /* AppDelegate.swift in Sources */,
 				4E62045B265A7615008C78A8 /* ContentListable.swift in Sources */,
@@ -863,6 +902,7 @@
 				4E62049B265A8A41008C78A8 /* ListViewDataSource.swift in Sources */,
 				4E6204FA265A9C60008C78A8 /* APIResult.swift in Sources */,
 				4E620482265A8518008C78A8 /* ListViewSectionListable.swift in Sources */,
+				4E620552265ABC9F008C78A8 /* DetailViewModel.swift in Sources */,
 				4E62047D265A8502008C78A8 /* ListViewListable.swift in Sources */,
 				4E620448265A757B008C78A8 /* ListViewContentCellViewModelProtocol.swift in Sources */,
 				4E6204A9265A8ADD008C78A8 /* ListViewModelProtocol.swift in Sources */,

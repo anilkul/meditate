@@ -29,12 +29,17 @@ class ListViewManager: ListViewManagable {
   
   // MARK: - Parser
   lazy var parser: ListViewParsable = {
-    return ListViewParser()
+    return ListViewParser(router: router)
   }()
   
   // MARK: - Data Provider
   lazy var dataProvider: ListViewDataProvidable = {
     return ListViewDataProvider(viewModel: viewModel, parser: parser, networkManager: networkManager)
+  }()
+  
+  // MARK: - Router
+  lazy var router: Routable = {
+    return Router()
   }()
   
   // MARK: - Initializer
