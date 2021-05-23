@@ -25,23 +25,34 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
   var itemSize: CGSize {
     switch self {
     case .horizontal(let itemType):
-      let height = floor((itemType == nil ? ItemType.content.itemWidth : itemWidth) * aspectRatio) + lineHeight.subtitle + lineHeight.title + IndividualConstants.contentTitleTopMargin
-      if itemType == nil {
-        return CGSize(width: Constants.Interface.windowWidth - collectionViewHorizontalInset.left, height: height)
-      }
-      return CGSize(width: itemWidth, height: height)
-    case .content:
-      let height = itemWidth
+      let imageWidth = (itemType == nil ? ItemType.content.itemWidth : itemWidth)
+      let imageHeight = floor(imageWidth * aspectRatio)
+      let itemHeight = imageHeight
         + lineHeight.subtitle
         + lineHeight.title
         + IndividualConstants.contentTitleTopMargin
-      return CGSize(width: itemWidth, height: height)
+      
+      if itemType == nil {
+        return CGSize(width: Constants.Interface.windowWidth - collectionViewHorizontalInset.left,
+                      height: itemHeight)
+      }
+      return CGSize(width: itemWidth,
+                    height: itemHeight)
+    case .content:
+      let itemHeight = itemWidth
+        + lineHeight.subtitle
+        + lineHeight.title
+        + IndividualConstants.contentTitleTopMargin
+      
+      return CGSize(width: itemWidth,
+                    height: itemHeight)
     case .banner:
-      return CGSize(width: itemWidth, height: IndividualConstants.bannerHeight)
+      return CGSize(width: itemWidth,
+                    height: IndividualConstants.bannerHeight)
     }
   }
   
-  /// List of cells to register for horizontal collection views in the list
+  /// List of cells to register for the horizontal collection view in the list
   var horizontalCellsToRegister: [ItemType] {
     return [.content]
   }
@@ -96,7 +107,13 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
   
   /// Calculated item width for cells
   var itemWidth: CGFloat {
-    return floor((Constants.Interface.windowWidth - ((columnSizeInSection - 1) * cellSpacing) - (collectionViewHorizontalInset.left + collectionViewHorizontalInset.right)) / columnSizeInSection)
+    let totalCellSpacing = ((columnSizeInSection - 1) * cellSpacing)
+    let totalHorizontalInset = (collectionViewHorizontalInset.left + collectionViewHorizontalInset.right)
+    let sumOfItemWidths = (Constants.Interface.windowWidth
+                            - totalCellSpacing
+                            - totalHorizontalInset)
+    
+    return floor(sumOfItemWidths / columnSizeInSection)
   }
   
   /// A Variable that returns spacing between cells for different traits.

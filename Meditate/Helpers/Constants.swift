@@ -36,5 +36,17 @@ struct Constants {
     static let collectionViewCompactRightInset: CGFloat = 24
     static let collectionViewRegularLeftInset: CGFloat = 40
     static let collectionViewRegularRightInset: CGFloat = 40
+    
+    /// Section Type
+    static let compactSectionBottomMargin: CGFloat = 24
+    static let regularSectionBottomMargin: CGFloat = 24
+    static let meditationsTitle: String = "Mediations"
+    static let storiesTitle: String = "Stories"
+    static let compactSectionHeaderHeight: CGFloat = 45
+    static let regularSectionHeaderHeight: CGFloat = 58
+    static let compactMinimumLineSpacing: CGFloat = 32
+    static let regularMinimumLineSpacing: CGFloat = 40
+    static let compactMinimumInteritemSpacing: CGFloat = 16
+    static let regularMinimumInteritemSpacing: CGFloat = 24
   }
 }
