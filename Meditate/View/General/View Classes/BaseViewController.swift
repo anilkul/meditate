@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
   }
   
   // MARK: - Routing
-  func pushViewController() -> (_ viewController: UIViewController) -> Void {
+  final func pushViewController() -> (_ viewController: UIViewController) -> Void {
     return { [weak self] viewController in
       guard let self = self else { return }
       DispatchQueue.main.async {

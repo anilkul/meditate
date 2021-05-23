@@ -9,9 +9,9 @@ import Foundation
 
 class ListViewDataProvider: ListViewDataProvidable {
   // MARK: - Variables
-  var viewModel: ListViewModelProtocol
-  var parser: ListViewParsable
-  var networkManager: NetworkManagable
+  private var viewModel: ListViewModelProtocol
+  private let parser: ListViewParsable
+  private let networkManager: NetworkManagable
   
   // MARK: - Initialization
   init(viewModel: ListViewModelProtocol, parser: ListViewParsable, networkManager: NetworkManagable) {
@@ -21,7 +21,7 @@ class ListViewDataProvider: ListViewDataProvidable {
   }
   
   // MARK: - Request Operations
-  func requestContentList() {
+  final func requestContentList() {
     // Since baseURL is provided as default value and other default values satisfy our network request, no need to fill the APIMethod struct.
     let apiMethod: APIMethod = APIMethod()
     networkManager.request(apiMethod) { (result: APIResult<ContentList>) in

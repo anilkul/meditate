@@ -15,7 +15,7 @@ class ListViewParser: ListViewParsable {
   }
   
   // MARK: - List Parser
-  func parsed(contentList: ContentList) -> [[BaseCollectionViewCellViewModelProtocol]] {
+  final func parsed(contentList: ContentList) -> [[BaseCollectionViewCellViewModelProtocol]] {
     var dataSource: [[BaseCollectionViewCellViewModelProtocol]] = []
     let horizontalList = [ListViewHorizontalCellViewModel(cellViewModels: parsed(content: contentList.meditations, itemType: .horizontal(.content)), horizontalItemType: .content)]
     dataSource.append(horizontalList)
@@ -25,13 +25,13 @@ class ListViewParser: ListViewParsable {
     return dataSource
   }
   
-  private func addBannerIfNeeded(to dataSource: inout [[BaseCollectionViewCellViewModelProtocol]], isBannerEnabled: Bool) {
+  private final func addBannerIfNeeded(to dataSource: inout [[BaseCollectionViewCellViewModelProtocol]], isBannerEnabled: Bool) {
     guard isBannerEnabled else { return }
     dataSource.insert([ListViewBannerCellViewModel()], at: Constants.bannerIndex)
   }
   
   // MARK: - Content Parser
-  private func parsed(content: [ContentListable], itemType: ItemType) -> [BaseCollectionViewCellViewModelProtocol] {
+  private final func parsed(content: [ContentListable], itemType: ItemType) -> [BaseCollectionViewCellViewModelProtocol] {
     var contentDataSource: [BaseCollectionViewCellViewModelProtocol] = []
     content.forEach {
       contentDataSource.append(ListViewContentCellViewModel(itemType: itemType, content: $0, router: router))

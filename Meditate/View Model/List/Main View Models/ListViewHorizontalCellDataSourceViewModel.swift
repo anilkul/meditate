@@ -9,7 +9,7 @@ import Foundation
 
 class ListViewHorizontalCellDataSourceViewModel: ListViewListable {
   // MARK: - Variables
-  var cellViewModels: [BaseCollectionViewCellViewModelProtocol]
+  private let cellViewModels: [BaseCollectionViewCellViewModelProtocol]
   
   // MARK: - Initializer
   init(cellViewModels: [BaseCollectionViewCellViewModelProtocol]) {

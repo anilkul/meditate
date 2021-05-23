@@ -22,7 +22,7 @@ class DetailViewModel: DetailViewModelProtocol {
   }
   
   // MARK: - Business Logic
-  final func formatDateString(from unixTimeString: String) {
+  private final func formatDateString(from unixTimeString: String) {
     let formatter = DateFormatter()
     let date = Date(timeIntervalSince1970: Double(unixTimeString) ?? NSTimeIntervalSince1970)
     formatter.dateFormat = Constants.dateFormatString

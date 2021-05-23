@@ -9,7 +9,7 @@ import UIKit
 
 class ListViewDataSourceViewModel: ListViewSectionListable {
   // MARK: - Variables
-  var viewModel: ListViewModelProtocol
+  private let viewModel: ListViewModelProtocol
   
   var numberOfSections: Int {
     viewModel.cellViewModels.count

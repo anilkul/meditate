@@ -9,10 +9,10 @@ import Alamofire
 
 class NetworkManager: NetworkManagable {
   // MARK: - Variables
-  private var reachabilityManager: NetworkReachabilityManager? = NetworkReachabilityManager()
+  private let reachabilityManager: NetworkReachabilityManager? = NetworkReachabilityManager()
   
   // MARK: - Request
-  func request<T: Decodable>(_ apiRoute: APIMethodProtocol,
+  final func request<T: Decodable>(_ apiRoute: APIMethodProtocol,
                              response: @escaping (APIResult<T>) -> Void) {
     
     let dataRequest = AF.request(apiRoute)
@@ -23,17 +23,17 @@ class NetworkManager: NetworkManagable {
   
   // MARK: - Request Handling
   /// This method transforms AF's result type to ours
-  func transform<T: Decodable>(_ type: T.Type, _ response: @escaping (APIResult<T>) -> Void) -> (AFDataResponse<T>) -> Void {
+  final func transform<T: Decodable>(_ type: T.Type, _ response: @escaping (APIResult<T>) -> Void) -> (AFDataResponse<T>) -> Void {
     return { [weak self] result in
       self?.map(result, of: T.self, response)
     }
   }
   
-  func map<T: Decodable>(_ result: AFDataResponse<T>, of type: T.Type, _ response: @escaping (APIResult<T>) -> Void) {
+  final func map<T: Decodable>(_ result: AFDataResponse<T>, of type: T.Type, _ response: @escaping (APIResult<T>) -> Void) {
     response(process(result, ofType: type))
   }
 
-  func process<T: Decodable>(_ result: AFDataResponse<T>, ofType type: T.Type) -> APIResult<T> {
+  final func process<T: Decodable>(_ result: AFDataResponse<T>, ofType type: T.Type) -> APIResult<T> {
     
     switch result.result {
     case .success(let response):

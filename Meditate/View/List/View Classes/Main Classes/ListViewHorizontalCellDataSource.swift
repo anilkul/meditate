@@ -11,7 +11,7 @@ import UIKit
 class ListViewHorizontalCellDataSource: NSObject, UICollectionViewDataSource {
   
   // MARK: - Variables
-  var viewModel: ListViewListable
+  private let viewModel: ListViewListable
   
   // MARK: - Initializer
   init(viewModel: ListViewListable) {

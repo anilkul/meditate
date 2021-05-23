@@ -9,7 +9,7 @@ import UIKit
 
 class ListViewDataSource: NSObject, UICollectionViewDataSource {
   // MARK: - Variables
-  var viewModel: ListViewSectionListable
+  private let viewModel: ListViewSectionListable
   
   // MARK: - Initializer
   init(viewModel: ListViewSectionListable) {

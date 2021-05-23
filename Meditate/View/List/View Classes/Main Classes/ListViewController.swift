@@ -12,7 +12,7 @@ class ListViewController: BaseViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   
   // MARK: - Variables
-  var manager: ListViewManagable!
+  private var manager: ListViewManagable!
   
   // MARK: - UI Lifecycle
   override func viewDidLoad() {
