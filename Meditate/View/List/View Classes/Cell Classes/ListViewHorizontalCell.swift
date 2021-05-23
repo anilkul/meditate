@@ -15,8 +15,23 @@ class ListViewHorizontalCell: ListViewBaseCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     collectionView.delegate = self
+    configureCell()
   }
   
+  func configureCell() {
+    configurationBlock = { [weak self] viewModel in
+      guard let self = self else { return }
+      guard let viewModel = viewModel as? ListViewHorizontalCellViewModelProtocol else { return }
+      self.registerCells(for: viewModel.horizontalItemType)
+      self.collectionView.dataSource = viewModel.dataSource
+    }
+  }
+  
+  func registerCells(for horizontalItemTypes: HorizontalItemTypeProtocol) {
+    horizontalItemTypes.horizontalCellsToRegister.forEach { (horizontalItemType) in
+      collectionView.register(UINib(nibName: horizontalItemType.identifier, bundle: nil), forCellWithReuseIdentifier: horizontalItemType.identifier)
+    }
+  }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -29,11 +44,11 @@ extension ListViewHorizontalCell: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     switch sizeClass {
     case (.compact, .regular):
-      return 16
+      return Constants.Interface.compactHorizontalMinimumLineSpacing
     case (.regular, .regular):
-      return 24
+      return Constants.Interface.regularHorizontalMinimumLineSpacing
     default:
-      return 16
+      return Constants.Interface.compactHorizontalMinimumLineSpacing
     }
   }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListViewContentCell: ListViewBaseCell {
   // MARK: - IBOutlets
@@ -16,9 +17,17 @@ class ListViewContentCell: ListViewBaseCell {
   // MARK: - UI Lifecycle
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
+    configureCell()
   }
   
   // MARK: - Configuration
-  
+  func configureCell() {
+    configurationBlock = { [weak self] viewModel in
+      guard let self = self else { return }
+      guard let viewModel = viewModel as? ListViewContentCellViewModelProtocol else { return }
+      self.imageView.kf.setImage(with: viewModel.imageURL)
+      self.titleLabel.text = viewModel.name
+      self.subtitleLabel.text = viewModel.category
+    }
+  }
 }

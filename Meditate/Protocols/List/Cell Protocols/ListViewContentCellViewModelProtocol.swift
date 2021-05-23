@@ -11,6 +11,4 @@ protocol ListViewContentCellViewModelProtocol: BaseCollectionViewCellViewModelPr
   var imageURL: URL? { get }
   var name: String { get }
   var category: String { get }
-  var imageHeight: CGFloat { get }
-  var imageWidth: CGFloat { get }
 }

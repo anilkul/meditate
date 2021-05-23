@@ -53,5 +53,7 @@ struct Constants {
     static let regularMinimumLineSpacing: CGFloat = 40
     static let compactMinimumInteritemSpacing: CGFloat = 16
     static let regularMinimumInteritemSpacing: CGFloat = 24
+    static let compactHorizontalMinimumLineSpacing: CGFloat = 16
+    static let regularHorizontalMinimumLineSpacing: CGFloat = 24
   }
 }
