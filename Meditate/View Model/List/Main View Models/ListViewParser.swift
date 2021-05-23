@@ -17,7 +17,7 @@ class ListViewParser: ListViewParsable {
   // MARK: - List Parser
   func parsed(contentList: ContentList) -> [[BaseCollectionViewCellViewModelProtocol]] {
     var dataSource: [[BaseCollectionViewCellViewModelProtocol]] = []
-    let horizontalList = [ListViewHorizontalCellViewModel(cellViewModels: parsed(content: contentList.meditations, itemType: .horizontal(.content)), horizontalItemType: .horizontal(.content))]
+    let horizontalList = [ListViewHorizontalCellViewModel(cellViewModels: parsed(content: contentList.meditations, itemType: .horizontal(.content)), horizontalItemType: .content)]
     dataSource.append(horizontalList)
     dataSource.append(parsed(content: contentList.stories, itemType: .content))
     

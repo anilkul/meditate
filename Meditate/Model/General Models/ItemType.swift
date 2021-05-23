@@ -18,26 +18,39 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
   
   /// List of cells to register to main list
   static var mainCellsToRegister: [ItemType] {
-    return [.horizontal(nil), .content, .banner]
+    return [.horizontal(.none), .content, .banner]
+  }
+  
+  /// Cell identifier
+  var identifier: String {
+    return cellClass.identifier()
+  }
+  
+  /// List of cells to register for the horizontal collection view in the list
+  var horizontalCellsToRegister: [ItemType] {
+    return [.content]
   }
   
   /// A computed variable that calculates item size according to indents, column size and spacing
   var itemSize: CGSize {
     switch self {
     case .horizontal(let itemType):
-      let imageWidth = (itemType == nil ? ItemType.content.itemWidth : itemWidth)
+      let imageWidth = (itemType == .none ? ItemType.content.itemWidth : itemWidth)
       let imageHeight = floor(imageWidth * aspectRatio)
       let itemHeight = imageHeight
         + lineHeight.subtitle
         + lineHeight.title
         + IndividualConstants.contentTitleTopMargin
-      
-      if itemType == nil {
+      switch itemType {
+      case .none:
         return CGSize(width: Constants.Interface.windowWidth - collectionViewHorizontalInset.left,
                       height: itemHeight)
+      case .some(.content):
+        return CGSize(width: itemWidth,
+                      height: itemHeight)
+      default:
+        return CGSize.zero
       }
-      return CGSize(width: itemWidth,
-                    height: itemHeight)
     case .content:
       let itemHeight = itemWidth
         + lineHeight.subtitle
@@ -53,7 +66,7 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
   }
   
   /// A variable that indicates current cell's class.
-  var cellClass: UICollectionViewCell.Type {
+  private var cellClass: UICollectionViewCell.Type {
     switch self {
     case .horizontal(let itemType):
       switch itemType {
@@ -67,16 +80,6 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
     case .content:
       return ListViewContentCell.self
     }
-  }
-  
-  /// Cell identifier
-  var identifier: String {
-    return cellClass.identifier()
-  }
-  
-  /// List of cells to register for the horizontal collection view in the list
-  var horizontalCellsToRegister: [ItemType] {
-    return [.content]
   }
   
   /// Aspect ratio for non-square images in the meditations section.
@@ -108,7 +111,7 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
   /// This variable stands for column size for different traits
   /// In order to not to cast from Int to CGFloat when used, this one is CGFloat
   private var columnSizeInSection: CGFloat {
-    if self == .banner || self == .horizontal(nil) {
+    if self == .banner || self == .horizontal(.none) {
       return 1
     }
     switch sizeClass {
@@ -122,13 +125,13 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
   }
   
   /// Calculated height of the image in content cells
-  var imageHeight: CGFloat {
-    let isHorizontal = self == .horizontal(nil) || self == .horizontal(.content)
+  private var imageHeight: CGFloat {
+    let isHorizontal = self == .horizontal(.none) || self == .horizontal(.content)
     return isHorizontal ? floor(itemWidth * aspectRatio) : itemWidth
   }
   
   /// Calculated item width for cells
-  var itemWidth: CGFloat {
+  private var itemWidth: CGFloat {
     let totalCellSpacing = ((columnSizeInSection - 1) * cellSpacing)
     let totalHorizontalInset = (collectionViewHorizontalInset.left + collectionViewHorizontalInset.right)
     let sumOfItemWidths = (Constants.Interface.windowWidth
