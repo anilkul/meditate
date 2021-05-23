@@ -52,6 +52,28 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
     }
   }
   
+  /// A variable that indicates current cell's class.
+  var cellClass: UICollectionViewCell.Type {
+    switch self {
+    case .horizontal(let itemType):
+      switch itemType {
+      case .content:
+        return ListViewContentCell.self
+      default:
+        return ListViewHorizontalCell.self
+      }
+    case .banner:
+      return ListViewContentCell.self
+    case .content:
+      return ListViewContentCell.self
+    }
+  }
+  
+  /// Cell identifier
+  var identifier: String {
+    return cellClass.identifier()
+  }
+  
   /// List of cells to register for the horizontal collection view in the list
   var horizontalCellsToRegister: [ItemType] {
     return [.content]

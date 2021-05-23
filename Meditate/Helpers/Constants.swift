@@ -7,6 +7,8 @@
 
 import UIKit
 
+typealias VoidHandler = () -> Void
+
 struct Constants {
   // URLs
   struct URLs {

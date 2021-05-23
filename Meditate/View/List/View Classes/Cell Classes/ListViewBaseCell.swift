@@ -11,7 +11,7 @@ class ListViewBaseCell: UICollectionViewCell {
   var viewModel: BaseCollectionViewCellViewModelProtocol!
   var configurationBlock: ((BaseCollectionViewCellViewModelProtocol) throws -> Void)?
   
-  func configureCell(with viewModel: BaseCollectionViewCellViewModelProtocol, for indexPath: IndexPath) {
+  final func configureCell(with viewModel: BaseCollectionViewCellViewModelProtocol, for indexPath: IndexPath) {
     self.viewModel = viewModel
     
     do {

@@ -8,12 +8,14 @@
 import UIKit
 
 class ListViewContentCellViewModel: BaseCollectionViewCellViewModel, ListViewContentCellViewModelProtocol {
+  // MARK: - Variables
   var imageURL: URL?
   var name: String
   var category: String
   var imageHeight: CGFloat
   var imageWidth: CGFloat
   
+  // MARK: - Initializer
   init(itemType: ItemType, content: ContentListable) {
     self.name = content.name
     self.category = content.category

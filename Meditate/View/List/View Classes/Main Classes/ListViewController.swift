@@ -8,7 +8,7 @@
 import UIKit
 
 class ListViewController: UIViewController {
-
+  // MARK: - UI Lifecycle
   @IBOutlet weak var collectionView: UICollectionView!
   
   override func viewDidLoad() {
