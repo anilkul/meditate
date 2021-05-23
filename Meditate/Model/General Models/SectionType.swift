@@ -28,14 +28,14 @@ enum SectionType: Int, CollectionViewHorizontalInsetAdjustable {
     }
   }
   
-  var sectionTitle: String? {
+  var sectionTitle: String {
     switch self {
     case .meditations:
       return IndividualConstants.meditationsTitle
     case .stories:
       return IndividualConstants.storiesTitle
     default:
-      return nil
+      return Constants.emptyString
     }
   }
   
