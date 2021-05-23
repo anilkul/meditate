@@ -8,8 +8,10 @@
 import Foundation
 
 class BaseCollectionViewCellViewModel: BaseCollectionViewCellViewModelProtocol {
+  // MARK: - Variables
   var type: ItemType
   
+  // MARK: - Initializer
   init() {
     type = ItemType.content
   }

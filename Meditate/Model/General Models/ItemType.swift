@@ -63,7 +63,7 @@ enum ItemType: Equatable, HorizontalItemTypeProtocol, CollectionViewHorizontalIn
         return ListViewHorizontalCell.self
       }
     case .banner:
-      return ListViewContentCell.self
+      return ListViewBannerCell.self
     case .content:
       return ListViewContentCell.self
     }

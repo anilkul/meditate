@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ListViewBannerCell" customModule="Meditate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="124"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qg-bb-ese">
+                        <rect key="frame" x="0.0" y="0.0" width="328" height="124"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-h7-zhu">
+                                <rect key="frame" x="16" y="33.5" width="57" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="1wj-Nm-dZK"/>
+                                    <constraint firstAttribute="height" constant="57" id="Wpv-1Y-6PM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXC-h7-91y">
+                                <rect key="frame" x="89" y="30" width="223" height="64.5"/>
+                                <string key="text">Look. Pretty, isn’t it?
+Perfectly balanced. As all things should be.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.21176470588235294" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X4X-h7-zhu" firstAttribute="leading" secondItem="9qg-bb-ese" secondAttribute="leading" constant="16" id="2TO-zP-lfG">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="EXC-h7-91y" secondAttribute="trailing" constant="16" id="3UO-nY-hg3">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="108"/>
+                            </constraint>
+                            <constraint firstItem="EXC-h7-91y" firstAttribute="leading" secondItem="X4X-h7-zhu" secondAttribute="trailing" constant="16" id="QaY-IB-G6d">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                            </constraint>
+                            <constraint firstItem="EXC-h7-91y" firstAttribute="centerY" secondItem="9qg-bb-ese" secondAttribute="centerY" id="QbN-ci-ljh"/>
+                            <constraint firstItem="X4X-h7-zhu" firstAttribute="centerY" secondItem="9qg-bb-ese" secondAttribute="centerY" id="oSp-kg-QzC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9qg-bb-ese" secondAttribute="trailing" id="abE-DM-LOC"/>
+                <constraint firstAttribute="bottom" secondItem="9qg-bb-ese" secondAttribute="bottom" id="bvk-LC-hqd"/>
+                <constraint firstItem="9qg-bb-ese" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sMe-Mu-aZW"/>
+                <constraint firstItem="9qg-bb-ese" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tZv-0b-jqW"/>
+            </constraints>
+            <size key="customSize" width="509" height="185"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bannerLabel" destination="EXC-h7-91y" id="hWS-Pz-L4a"/>
+            </connections>
+            <point key="canvasLocation" x="391.304347826087" y="141.96428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="night" width="60" height="60"/>
+    </resources>
+</document>

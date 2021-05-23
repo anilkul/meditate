@@ -19,6 +19,7 @@ class ListViewHorizontalCell: ListViewBaseCell {
   
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ListViewHorizontalCell: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     guard let cellViewModel = viewModel as? ListViewHorizontalCellViewModelProtocol else { return CGSize.zero }
