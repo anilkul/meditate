@@ -39,7 +39,9 @@ struct Constants {
     static let compactSubtitleHeight: CGFloat = 24
     static let regularSubtitleHeight: CGFloat = 25
     static let compactColumnSize: CGFloat = 2
-    static let regularColumnSize: CGFloat = isLandscape ? 6 : 4
+    static var regularColumnSize: CGFloat {
+      return isLandscape ? 6 : 4
+    }
     static let compactCellSpacing: CGFloat = 16
     static let regularCellSpacing: CGFloat = 24
     static let collectionViewCompactLeftInset: CGFloat = 24
