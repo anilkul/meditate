@@ -16,9 +16,15 @@ enum SectionType: Int, CollectionViewHorizontalInsetAdjustable {
   var edgeInsets: UIEdgeInsets {
     switch self {
     case .meditations:
-      return UIEdgeInsets(top: 0, left: collectionViewHorizontalInset.left, bottom: sectionBottomMargin, right: 0)
+      return UIEdgeInsets(top: 0,
+                          left: collectionViewHorizontalInset.left,
+                          bottom: sectionBottomMargin,
+                          right: 0)
     case .banner, .stories:
-      return UIEdgeInsets(top: 0, left: collectionViewHorizontalInset.left, bottom: sectionBottomMargin, right: collectionViewHorizontalInset.right)
+      return UIEdgeInsets(top: 0,
+                          left: collectionViewHorizontalInset.left,
+                          bottom: sectionBottomMargin,
+                          right: collectionViewHorizontalInset.right)
     }
   }
   
@@ -41,11 +47,14 @@ enum SectionType: Int, CollectionViewHorizontalInsetAdjustable {
     
     switch sizeClass {
     case (.compact, .regular):
-      return CGSize(width: width, height: IndividualConstants.compactSectionHeaderHeight)
+      return CGSize(width: width,
+                    height: IndividualConstants.compactSectionHeaderHeight)
     case (.regular, .regular):
-      return CGSize(width: width, height: IndividualConstants.regularSectionHeaderHeight)
+      return CGSize(width: width,
+                    height: IndividualConstants.regularSectionHeaderHeight)
     default:
-      return CGSize(width: width, height: IndividualConstants.compactSectionHeaderHeight)
+      return CGSize(width: width,
+                    height: IndividualConstants.compactSectionHeaderHeight)
     }
   }
   
