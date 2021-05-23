@@ -9,6 +9,5 @@ import UIKit
 
 /// A protocol that determines what horizontal cells use
 protocol HorizontalItemTypeProtocol {
-  var itemSize: CGSize { get }
   var horizontalCellsToRegister: [ItemType] { get }
 }

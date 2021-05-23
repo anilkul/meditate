@@ -9,12 +9,12 @@ import Foundation
 
 class ListViewDataProvider: ListViewDataProvidable {
   // MARK: - Variables
-  private var viewModel: ListViewModelProtocol
+  private var viewModel: ListViewModelDataProcessable
   private let parser: ListViewParsable
   private let networkManager: NetworkManagable
   
   // MARK: - Initialization
-  init(viewModel: ListViewModelProtocol, parser: ListViewParsable, networkManager: NetworkManagable) {
+  init(viewModel: ListViewModelDataProcessable, parser: ListViewParsable, networkManager: NetworkManagable) {
     self.viewModel = viewModel
     self.parser = parser
     self.networkManager = networkManager

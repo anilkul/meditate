@@ -74,6 +74,7 @@
 		4E6205BD265B03BC008C78A8 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6205BC265B03BC008C78A8 /* Meditation.swift */; };
 		4E6205C2265B03C5008C78A8 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6205C1265B03C5008C78A8 /* Story.swift */; };
 		4E6205C7265B03D4008C78A8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6205C6265B03D4008C78A8 /* Image.swift */; };
+		4E6205CF265B21B9008C78A8 /* ListViewModelDataProcessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6205CE265B21B9008C78A8 /* ListViewModelDataProcessable.swift */; };
 		87C8034C4F03FD549575D1DA /* Pods_Meditate_MeditateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493CB210B080358A67AC60AB /* Pods_Meditate_MeditateUITests.framework */; };
 		8D7708A2AAC0D6580E8B5534 /* Pods_MeditateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */; };
 /* End PBXBuildFile section */
@@ -175,6 +176,7 @@
 		4E6205BC265B03BC008C78A8 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		4E6205C1265B03C5008C78A8 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		4E6205C6265B03D4008C78A8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4E6205CE265B21B9008C78A8 /* ListViewModelDataProcessable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelDataProcessable.swift; sourceTree = "<group>"; };
 		A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C544980D8DB06F5BCECBC3F7 /* Pods-Meditate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate.debug.xcconfig"; path = "Target Support Files/Pods-Meditate/Pods-Meditate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -561,6 +563,7 @@
 				4E620481265A8518008C78A8 /* ListViewSectionListable.swift */,
 				4E6204A8265A8ADD008C78A8 /* ListViewModelProtocol.swift */,
 				4E620528265AA066008C78A8 /* ListViewParsable.swift */,
+				4E6205CE265B21B9008C78A8 /* ListViewModelDataProcessable.swift */,
 			);
 			path = "Main Protocols";
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				4E62043E265A7449008C78A8 /* BaseCollectionViewCellViewModel.swift in Sources */,
 				4E620387265A48FD008C78A8 /* ListViewController.swift in Sources */,
 				4E62052F265AB692008C78A8 /* ListViewSectionHeader.swift in Sources */,
+				4E6205CF265B21B9008C78A8 /* ListViewModelDataProcessable.swift in Sources */,
 				4E62054D265ABC52008C78A8 /* DetailViewController.swift in Sources */,
 				4E620524265AA009008C78A8 /* ListViewParser.swift in Sources */,
 				4E62055A265ABCB7008C78A8 /* DetailViewModelProtocol.swift in Sources */,

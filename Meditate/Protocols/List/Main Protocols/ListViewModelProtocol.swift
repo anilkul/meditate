@@ -7,8 +7,6 @@
 
 import UIKit
 
-protocol ListViewModelProtocol {
-  var cellViewModels: [[BaseCollectionViewCellViewModelProtocol]] { get set }
-  var reloadTrigger: VoidHandler? { get set }
+protocol ListViewModelProtocol: ListViewModelDataProcessable {
   var collectionViewEdgeInsets: UIEdgeInsets { get }
 }
