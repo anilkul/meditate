@@ -6,6 +6,8 @@ target 'Meditate' do
   use_frameworks!
 
   # Pods for Meditate
+  pod 'Alamofire', '~> 5.2'
+  pod 'Kingfisher', '~> 6.0'
 
   target 'MeditateTests' do
     inherit! :search_paths

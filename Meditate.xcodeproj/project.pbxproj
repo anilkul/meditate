@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143E470DF06CC691A3C3C2B8 /* Pods_Meditate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E551637C3DD0E4C93C161AD /* Pods_Meditate.framework */; };
 		4E620383265A48FD008C78A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620382265A48FD008C78A8 /* AppDelegate.swift */; };
 		4E620385265A48FD008C78A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620384265A48FD008C78A8 /* SceneDelegate.swift */; };
 		4E620387265A48FD008C78A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620386265A48FD008C78A8 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		4E62038F265A48FE008C78A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E62038D265A48FE008C78A8 /* LaunchScreen.storyboard */; };
 		4E62039A265A48FF008C78A8 /* MeditateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E620399265A48FF008C78A8 /* MeditateTests.swift */; };
 		4E6203A5265A48FF008C78A8 /* MeditateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6203A4265A48FF008C78A8 /* MeditateUITests.swift */; };
+		87C8034C4F03FD549575D1DA /* Pods_Meditate_MeditateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493CB210B080358A67AC60AB /* Pods_Meditate_MeditateUITests.framework */; };
+		8D7708A2AAC0D6580E8B5534 /* Pods_MeditateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0010777645F1CD36B615A5FB /* Pods-Meditate-MeditateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate-MeditateUITests.release.xcconfig"; path = "Target Support Files/Pods-Meditate-MeditateUITests/Pods-Meditate-MeditateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		251E63107DA6EE3FAC26F52A /* Pods-MeditateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeditateTests.debug.xcconfig"; path = "Target Support Files/Pods-MeditateTests/Pods-MeditateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E551637C3DD0E4C93C161AD /* Pods_Meditate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meditate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		300468F4B7EBB987A51B90CD /* Pods-MeditateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeditateTests.release.xcconfig"; path = "Target Support Files/Pods-MeditateTests/Pods-MeditateTests.release.xcconfig"; sourceTree = "<group>"; };
+		433726B8A3FD95D79E6E35C3 /* Pods-Meditate-MeditateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate-MeditateUITests.debug.xcconfig"; path = "Target Support Files/Pods-Meditate-MeditateUITests/Pods-Meditate-MeditateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		493CB210B080358A67AC60AB /* Pods_Meditate_MeditateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meditate_MeditateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B4644B12AAF41C5932A0563 /* Pods-Meditate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate.release.xcconfig"; path = "Target Support Files/Pods-Meditate/Pods-Meditate.release.xcconfig"; sourceTree = "<group>"; };
 		4E62037F265A48FD008C78A8 /* Meditate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E620382265A48FD008C78A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E620384265A48FD008C78A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		4E6203A0265A48FF008C78A8 /* MeditateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeditateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6203A4265A48FF008C78A8 /* MeditateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditateUITests.swift; sourceTree = "<group>"; };
 		4E6203A6265A48FF008C78A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeditateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C544980D8DB06F5BCECBC3F7 /* Pods-Meditate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditate.debug.xcconfig"; path = "Target Support Files/Pods-Meditate/Pods-Meditate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143E470DF06CC691A3C3C2B8 /* Pods_Meditate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7708A2AAC0D6580E8B5534 /* Pods_MeditateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87C8034C4F03FD549575D1DA /* Pods_Meditate_MeditateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06BCB22877CE53AAE8B5E27B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C544980D8DB06F5BCECBC3F7 /* Pods-Meditate.debug.xcconfig */,
+				4B4644B12AAF41C5932A0563 /* Pods-Meditate.release.xcconfig */,
+				433726B8A3FD95D79E6E35C3 /* Pods-Meditate-MeditateUITests.debug.xcconfig */,
+				0010777645F1CD36B615A5FB /* Pods-Meditate-MeditateUITests.release.xcconfig */,
+				251E63107DA6EE3FAC26F52A /* Pods-MeditateTests.debug.xcconfig */,
+				300468F4B7EBB987A51B90CD /* Pods-MeditateTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E620376265A48FD008C78A8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				4E620398265A48FF008C78A8 /* MeditateTests */,
 				4E6203A3265A48FF008C78A8 /* MeditateUITests */,
 				4E620380265A48FD008C78A8 /* Products */,
+				06BCB22877CE53AAE8B5E27B /* Pods */,
+				5297F5068582B4E6ABFE9E62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +328,16 @@
 			path = "General Models";
 			sourceTree = "<group>";
 		};
+		5297F5068582B4E6ABFE9E62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E551637C3DD0E4C93C161AD /* Pods_Meditate.framework */,
+				493CB210B080358A67AC60AB /* Pods_Meditate_MeditateUITests.framework */,
+				A7985EA80035A273D0684306 /* Pods_MeditateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6203A9265A48FF008C78A8 /* Build configuration list for PBXNativeTarget "Meditate" */;
 			buildPhases = (
+				CFA990DA273101D9208473FF /* [CP] Check Pods Manifest.lock */,
 				4E62037B265A48FD008C78A8 /* Sources */,
 				4E62037C265A48FD008C78A8 /* Frameworks */,
 				4E62037D265A48FD008C78A8 /* Resources */,
+				CA8224B150231120A753CF52 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6203AC265A48FF008C78A8 /* Build configuration list for PBXNativeTarget "MeditateTests" */;
 			buildPhases = (
+				4AD5736C8EEA930179DB4800 /* [CP] Check Pods Manifest.lock */,
 				4E620391265A48FF008C78A8 /* Sources */,
 				4E620392265A48FF008C78A8 /* Frameworks */,
 				4E620393265A48FF008C78A8 /* Resources */,
@@ -339,9 +383,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6203AF265A48FF008C78A8 /* Build configuration list for PBXNativeTarget "MeditateUITests" */;
 			buildPhases = (
+				99EDB931E2BA60D7815FC213 /* [CP] Check Pods Manifest.lock */,
 				4E62039C265A48FF008C78A8 /* Sources */,
 				4E62039D265A48FF008C78A8 /* Frameworks */,
 				4E62039E265A48FF008C78A8 /* Resources */,
+				1581C17F60D50D0D8573288A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -421,6 +467,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1581C17F60D50D0D8573288A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meditate-MeditateUITests/Pods-Meditate-MeditateUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meditate-MeditateUITests/Pods-Meditate-MeditateUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meditate-MeditateUITests/Pods-Meditate-MeditateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AD5736C8EEA930179DB4800 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeditateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99EDB931E2BA60D7815FC213 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meditate-MeditateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA8224B150231120A753CF52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meditate/Pods-Meditate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meditate/Pods-Meditate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meditate/Pods-Meditate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA990DA273101D9208473FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meditate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E62037B265A48FD008C78A8 /* Sources */ = {
@@ -602,6 +751,7 @@
 		};
 		4E6203AA265A48FF008C78A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C544980D8DB06F5BCECBC3F7 /* Pods-Meditate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -621,6 +771,7 @@
 		};
 		4E6203AB265A48FF008C78A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B4644B12AAF41C5932A0563 /* Pods-Meditate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -640,6 +791,7 @@
 		};
 		4E6203AD265A48FF008C78A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 251E63107DA6EE3FAC26F52A /* Pods-MeditateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,6 +814,7 @@
 		};
 		4E6203AE265A48FF008C78A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300468F4B7EBB987A51B90CD /* Pods-MeditateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -684,6 +837,7 @@
 		};
 		4E6203B0265A48FF008C78A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433726B8A3FD95D79E6E35C3 /* Pods-Meditate-MeditateUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,6 +858,7 @@
 		};
 		4E6203B1265A48FF008C78A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0010777645F1CD36B615A5FB /* Pods-Meditate-MeditateUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
