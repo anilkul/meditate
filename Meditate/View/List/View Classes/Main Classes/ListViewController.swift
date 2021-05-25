@@ -69,6 +69,7 @@ class ListViewController: BaseViewController {
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
+    // reloadData() should be called after the device finished rotating
     DispatchQueue.main.async {
       self.collectionView.reloadData()
     }
