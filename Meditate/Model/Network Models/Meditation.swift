@@ -13,8 +13,8 @@ struct Meditation: ContentListable {
   
   enum CodingKeys: String, CodingKey {
     case name = "title"
-    case category = "releaseDate"
-    case date = "subtitle"
+    case category = "subtitle"
+    case date = "releaseDate"
     case text = "content"
     case image
   }
